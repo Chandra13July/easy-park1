@@ -9,7 +9,11 @@ class RoleFactory extends Factory
 {
     public function definition(): array
     {
-        $name = $this->faker->unique()->jobTitle();
+        $name = $this->faker->randomElement([
+            'Admin',
+            'Petugas',
+            'Mahasiswa'
+        ]);
 
         return [
             'name' => $name,

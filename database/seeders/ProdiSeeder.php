@@ -11,7 +11,6 @@ class ProdiSeeder extends Seeder
 {
     public function run(): void
     {
-        // Data Prodi dengan Jurusan yang sesuai
         $jurusanProdi = [
             'Teknologi Informasi' => ['Bisnis Digital', 'Teknik Informatika'],
             'Bahasa, Komunikasi, dan Pariwisata' => ['Produksi Media'],
@@ -20,7 +19,6 @@ class ProdiSeeder extends Seeder
         ];
     
         foreach ($jurusanProdi as $jurusanNama => $prodis) {
-            // Mencari jurusan berdasarkan nama
             $jurusan = Jurusan::where('jurusan', $jurusanNama)->first();
     
             if ($jurusan) {

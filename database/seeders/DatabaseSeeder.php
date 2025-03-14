@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             JurusanSeeder::class,
             ProdiSeeder::class,
+            JenisSeeder::class,
         ]);
 
         User::factory()->create([

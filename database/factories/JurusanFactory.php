@@ -9,11 +9,16 @@ class JurusanFactory extends Factory
 {
     public function definition(): array
     {
-        $jurusan = $this->faker->unique()->word();
+        $jurusan = $this->faker->randomElement([
+            'Teknologi Informasi', 
+            'Bahasa, Komunikasi, dan Pariwisata', 
+            'Manajemen Agribisnis', 
+            'Teknologi Pertanian'
+        ]);
 
         return [
-            'jurusan' => ucfirst($jurusan), // Kapital di awal
-            'slug' => Str::slug($jurusan),
+            'jurusan' => ucfirst($jurusan), 
+            'slug' => Str::slug($jurusan), 
         ];
     }
 }

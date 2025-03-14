@@ -10,7 +10,12 @@ class JurusanSeeder extends Seeder
 {
     public function run(): void
     {
-        $jurusans = ['Teknologi Informasi','Bahasa, Komunikasi, dan Pariwisata', 'Manajemen Agribisnis', 'Teknologi Pertanian'];
+        $jurusans = [
+            'Teknologi Informasi',
+            'Bahasa, Komunikasi, dan Pariwisata', 
+            'Manajemen Agribisnis', 
+            'Teknologi Pertanian'
+        ];
 
         foreach ($jurusans as $jurusan) {
             Jurusan::create([
