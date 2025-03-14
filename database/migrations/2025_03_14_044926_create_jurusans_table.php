@@ -9,8 +9,8 @@ return new class extends Migration {
     {
         Schema::create('jurusans', function (Blueprint $table) {
             $table->id();
-            $table->string('jurusan', 30)->unique(); 
-            $table->string('slug', 30)->unique(); 
+            $table->string('jurusan', 50)->unique(); 
+            $table->string('slug', 50)->unique(); 
             $table->timestamps(); 
             $table->softDeletes(); 
         });
